@@ -66,7 +66,7 @@ export function MessageCard({ message, onMessageDelete }: MessageCardProps) {
                 <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
                 <AlertDialogDescription>
                   This action cannot be undone. This will permanently delete
-                  this message.
+                  the message.
                 </AlertDialogDescription>
               </AlertDialogHeader>
               <AlertDialogFooter>
@@ -80,9 +80,11 @@ export function MessageCard({ message, onMessageDelete }: MessageCardProps) {
             </AlertDialogContent>
           </AlertDialog>
         </div>
+
         <div className="text-sm">
           {dayjs(message.createdAt).format('MMM D, YYYY h:mm A')}
         </div>
+        
       </CardHeader>
       <CardContent></CardContent>
     </Card>
